@@ -13,7 +13,7 @@ export default () => {
 
             <HeaderComponent/>
 
-            <h1 style = {{ marginTop: 40, alignSelf: 'center', color: 'white' }}>Enter the OTP</h1>
+            <h1 style = {{ marginTop: 100, alignSelf: 'center', color: 'white' }}>Enter the OTP</h1>
 
             <div style = {{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column', width: '60%', marginTop: 20, backgroundColor: '#4A4A4A', borderRadius: 20, boxShadow: '2px 4px 6px black', alignSelf: 'center' }}>
 

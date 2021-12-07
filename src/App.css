@@ -49,3 +49,11 @@ html, body, #root, .App {
 .bg5 {
   background: linear-gradient(#111111, transparent, transparent);
 }
+
+.bg6 {
+  background: linear-gradient(45deg, black, #222222, rgba(93, 93, 93, 1));
+}
+
+.img-blur {
+  filter: blur(1px);
+}

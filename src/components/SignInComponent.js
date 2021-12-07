@@ -25,11 +25,11 @@ export default () => {
 
             <HeaderComponent/>
 
-            <h1 style = {{ textAlign: 'center', color: 'white', marginTop: 40 }}>Login</h1>
+            <h1 style = {{ textAlign: 'center', color: 'white', marginTop: 100 }}>Login</h1>
 
             <div style = {{ display: 'flex', flexWrap: 'wrap', flexDirection: 'column', width: '60%', marginLeft: '20%', marginRight: '20%', marginTop: 20, backgroundColor: '#4A4A4A', borderRadius: 20, boxShadow: '2px 4px 6px black', alignSelf: 'center' }}>
 
-                <div style = {{ display: 'flex', flexDirection: 'row', width: 150, paddingLeft: 10, paddingRight: 10, paddingTop: 5, paddingBottom: 5, borderRadius: 20, color: 'white', fontWeight: 300, alignSelf: 'center', backgroundColor: '#222222', marginTop: 40, boxShadow: '1px 2px black inset', alignItems: 'center' }}>
+                <div style = {{ display: 'flex', flexDirection: 'row', width: 150, paddingLeft: 40, paddingRight: 40, paddingTop: 5, paddingBottom: 5, borderRadius: 20, color: 'white', fontWeight: 300, alignSelf: 'center', backgroundColor: '#222222', marginTop: 40, boxShadow: '1px 2px black inset', alignItems: 'center' }}>
 
                     +91
 
@@ -74,6 +74,8 @@ export default () => {
 
                         navigate(`/otp/${ phoneNumber }`, { phone_number: phoneNumber })
 
+                        console.log(document.getElementById('phone_number').value)
+
                         sendOTP(document.getElementById('phone_number').value, () => {
                             navigate('/otp', { phone_number: phoneNumber })
                         })
@@ -101,7 +103,7 @@ export default () => {
 
                 </div>
 
-                <input style = {{ marginTop: 20, width: 150, alignSelf: 'center', backgroundColor: '#222222', borderRadius: 20, borderWidth: 0, paddingLeft: 15, paddingRight: 15, paddingTop: 10, paddingBottom: 10, fontSize: 14, boxShadow: '1px 2px black inset', color: 'white', outline: 'none', marginBottom: 40 }} type = 'text' placeholder = 'Type it here...'/>
+                <input style = {{ marginTop: 20, width: 200, alignSelf: 'center', backgroundColor: '#222222', borderRadius: 20, borderWidth: 0, paddingLeft: 15, paddingRight: 15, paddingTop: 10, paddingBottom: 10, fontSize: 14, boxShadow: '1px 2px black inset', color: 'white', outline: 'none', marginBottom: 40 }} type = 'text' placeholder = 'Type it here...'/>
 
             </div>
 

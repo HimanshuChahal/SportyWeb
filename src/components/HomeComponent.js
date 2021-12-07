@@ -2,6 +2,13 @@ import React from 'react'
 import '../App.css'
 import { useNavigate } from 'react-router-dom'
 import HeaderComponent from './HeaderComponent'
+import TextComponent from './TextComponent'
+import Mobile_Image from '../assets/mobile_image.png'
+import { AiOutlineArrowRight } from 'react-icons/ai'
+import HomePage2Component from './HomePage2Component'
+import HomePage3Component from './HomePage3Component'
+import HomePage7Component from './HomePage7Component'
+import HomeTrailerComponent from './HomeTrailerComponent'
 
 const HomeComponent = () => {
 
@@ -12,67 +19,50 @@ const HomeComponent = () => {
 
             <HeaderComponent/>
 
-            <div style = {{ display: 'flex', flexDirection: 'row', flex: 1, marginTop: 40, marginBottom: 40, marginLeft: '10%', marginRight: '10%', alignItems: 'center', alignSelf: 'center', marginBottom: 100 }}>
+            <div style = {{ display: 'flex', flex: 1, flexDirection: 'row', marginTop: 40, marginBottom: 40, marginLeft: '10%', marginRight: '10%', alignSelf: 'center', marginBottom: 100 }}>
 
-                <h1 style = {{ flex: 1, fontSize: window.innerWidth/20, textAlign: 'center', color: 'white', fontWeight: 300, marginRight: '5%' }}>India's Best Fitness and Sports Coaches Under One Roof!</h1>
+                <div style = {{ display: 'flex', flex: 1, flexDirection: 'column', marginTop: 80, marginRight: '5%' }}>
 
-                <div style = {{ display: 'flex', flexDirection: 'column' }}>
+                    <h1 style = {{ fontSize: window.innerWidth/22, textAlign: 'center', color: 'white', fontWeight: 500 }}>India's Best Fitness and Sports Coaches Under One Roof!</h1>
 
-                    <h2 style = {{ flex: 1, fontSize: window.innerWidth/20, textAlign: 'center', color: 'white', fontWeight: 200, marginLeft: '5%' }}> Welcome to Sporty</h2>
+                    <div style = {{ marginTop: 20, color: 'white', textAlign: 'center', alignSelf: 'center', marginLeft: '20%', marginRight: '20%' }}>Not sure how to play at the big stage?  Or be the fittest version of yourself? Make us a part of your journey and see the miracles!</div>
 
-                    <button onClick = {() => navigate('/signin')} className = 'button' style = {{ marginLeft: '10%', marginRight: '10%', color: 'white', paddingTop: 10, paddingBottom: 10, paddingLeft: 50, paddingRight: 50, borderRadius: 40, borderWidth: 0, fontSize: 20, justifyContent: 'center', alignSelf: 'center', cursor: 'pointer' }}>
-
+                    <button className = 'bg1' style = {{ display: 'flex', flexDirection: 'row', alignSelf: 'center', marginTop: 20, borderRadius: 20, paddingTop: 10, paddingBottom: 10, paddingLeft: 40, paddingRight: 40, color: 'white', fontSize: 19, borderWidth: 0, alignItems: 'center', cursor: 'pointer' }}
+                    onClick = {() => navigate('/signin')}>
+                        
                         Login to learn more
-
+                    
+                        <AiOutlineArrowRight style = {{ marginLeft: 10 }} color = 'white'/>
+                    
                     </button>
+
+                </div>
+
+                <div style = {{ display: 'flex', flexDirection: 'row', marginTop: 60 }}>
+
+                    <div style = {{ display: 'flex', flexDirection: 'column' }}>
+
+                        <TextComponent/>
+
+                    </div>
+
+                    <div style = {{ display: 'flex', flexDirection: 'column', maxWidth: window.innerWidth/5, maxHeight: window.innerHeight/2 }}>
+
+                        <img style = {{ width: 420, height: 700, marginLeft: -100, marginTop: -60 }} src = { Mobile_Image }/>
+
+                    </div>
 
                 </div>
 
             </div>
 
-            {/* <table width = '100%' style = {{ marginTop: 40 }}>
+            <HomePage2Component/>
 
-                <tr>
+            <HomePage3Component/>
 
-                    <td width = '50%' style = {{ paddingLeft: '10%', paddingRight: '10%' }}>
+            <HomePage7Component/>
 
-                        <h1 style = {{ fontSize: window.innerWidth/20, textAlign: 'center', color: 'white', fontWeight: 300 }}>India's Best Fitness and Sports Coaches Under One Roof!</h1>
-
-                    </td>
-
-                    <td width = '50%' style = {{ paddingLeft: '10%', paddingRight: '10%' }}>
-
-                        <h2 style = {{ fontSize: window.innerWidth/20, textAlign: 'center', color: 'white', fontWeight: 200 }}> Welcome to Sporty</h2>
-
-                        <button onClick = {() => navigate('/signin')} className = 'button' style = {{ width: '80%', zIndex: 2, marginLeft: '10%', marginRight: '10%', color: 'white', fontSize: 20, paddingTop: 10, paddingBottom: 10, borderRadius: 20, borderWidth: 0, justifyContent: 'center', cursor: 'pointer' }}>
-
-                            <table width = '100%'>
-
-                                <tr>
-
-                                    <td width = '80%'>
-
-                                        <div>Login to learn more</div>
-
-                                    </td>
-
-                                    <td>
-
-                                        <AiOutlineArrowRight style = {{ marginTop: 5 }} color = 'white'/>
-
-                                    </td>
-
-                                </tr>
-
-                            </table>
-
-                        </button>
-
-                    </td>
-
-                </tr>
-
-            </table> */}
+            <HomeTrailerComponent/>
 
         </div>
     )
